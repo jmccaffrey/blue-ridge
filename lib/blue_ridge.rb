@@ -1,5 +1,5 @@
 module BlueRidge
-  JavaScriptSpecDirs = ["examples/javascripts", "spec/javascripts", "test/javascript"]
+  JavaScriptSpecDirs = ENV["JS_TEST_DIR"] || ["examples/javascripts", "spec/javascripts", "test/javascript"]
   
   def self.plugin_prefix
     ENV["BLUE_RIDGE_PREFIX"] || "#{RAILS_ROOT}/vendor/plugins/blue-ridge"
